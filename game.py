@@ -23,9 +23,9 @@ class Game:
     def new_game(self):
         self.all_sprites = pg.sprite.Group()
         self.platforms = pg.sprite.Group()
-        self.player = Player()
-        p1 = Platform(0, SC_HEIGHT - 64, SC_WIDTH, 64)
+        self.player = Player(self)
         self.all_sprites.add(self.player)
+        p1 = Platform(0, SC_HEIGHT - 64, SC_WIDTH, 64)
         self.all_sprites.add(p1)
         self.platforms.add(p1)
         self.play()
